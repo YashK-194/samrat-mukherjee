@@ -9,7 +9,7 @@ export default function ParallaxHero() {
   const fade = useTransform(scrollY, [0, 400], [1, 0]);
 
   return (
-    <div className="relative min-h-[85vh] sm:min-h-[88vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-20 sm:pt-24 lg:pt-28 bg-slate-950">
+    <div className="relative min-h-[92vh] sm:min-h-[95vh] lg:min-h-[96vh] flex items-center overflow-hidden pt-20 sm:pt-24 lg:pt-28 pb-4 sm:pb-6 lg:pb-8 bg-slate-950">
       {/* Dark background with dot pattern */}
       <motion.div
         style={{ y: yBg, opacity: fade }}
@@ -89,7 +89,7 @@ export default function ParallaxHero() {
                 Start Your Journey
               </button>
             </div>
-            <div className="mt-8 sm:mt-10 lg:mt-12 flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 lg:gap-8 text-center">
+            <div className="mt-8 sm:mt-10 lg:mt-12 flex flex-wrap justify-center md:justify-start gap-8 sm:gap-12 lg:gap-16 text-center">
               {[
                 { v: "2000+", l: "Students" },
                 { v: "15+", l: "Institutes" },
@@ -97,7 +97,7 @@ export default function ParallaxHero() {
               ].map((i) => (
                 <div
                   key={i.l}
-                  className="min-w-[70px] sm:min-w-[80px] lg:min-w-[90px]"
+                  className="min-w-[80px] sm:min-w-[90px] lg:min-w-[100px]"
                 >
                   <div className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-indigo-400 tracking-tight">
                     {i.v}
