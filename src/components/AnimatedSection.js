@@ -6,6 +6,8 @@ export default function AnimatedSection({
   children,
   className = "",
   delay = 0,
+  id,
+  ...props
 }) {
   const ref = useRef(null);
   const controls = useAnimation();
@@ -29,6 +31,8 @@ export default function AnimatedSection({
         },
       }}
       className={className}
+      id={id}
+      {...props}
     >
       {children}
     </motion.section>
