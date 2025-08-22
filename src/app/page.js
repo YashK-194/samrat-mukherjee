@@ -8,7 +8,7 @@ import CollegeFeedbackCarousel from "../components/CollegeFeedbackCarousel";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-red-50">
+    <div className="min-h-screen bg-gradient-to-br from-rose-900 via-red-900 to-red-950 text-white">
       {/* Navigation */}
       <Navigation />
 
@@ -22,17 +22,16 @@ export default function Home() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
                 About
-                {/* <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"> */}
-                <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
                   Samrat
                 </span>
               </h2>
-              <p className="text-lg text-red-200 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-200 mb-6 leading-relaxed">
                 As a Lead Data Analyst and passionate educator, I've dedicated
                 my career to making data analytics accessible and transformative
                 for professionals worldwide.
               </p>
-              <p className="text-lg text-red-200 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-200 mb-8 leading-relaxed">
                 With years of hands-on industry experience and a proven teaching
                 methodology, I've helped thousands transition into successful
                 data careers and advance to leadership positions.
@@ -40,30 +39,28 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-8 mb-8">
                 <div className="text-center">
-                  {/* <div className="text-4xl font-bold text-indigo-400 mb-2"> */}
-                  <div className="text-4xl font-bold text-red-500 mb-2">
+                  <div className="text-4xl font-bold text-yellow-400 mb-2">
                     2000+
                   </div>
-                  <div className="text-red-300">Students Taught</div>
+                  <div className="text-gray-300">Students Taught</div>
                 </div>
                 <div className="text-center">
-                  {/* <div className="text-4xl font-bold text-indigo-400 mb-2"> */}
-                  <div className="text-4xl font-bold text-red-500 mb-2">
+                  <div className="text-4xl font-bold text-yellow-400 mb-2">
                     15+
                   </div>
-                  <div className="text-red-300">Institutes Partnered</div>
+                  <div className="text-gray-300">Institutes Partnered</div>
                 </div>
                 <div className="text-center">
-                  {/* <div className="text-4xl font-bold text-indigo-400 mb-2"> */}
-                  <div className="text-4xl font-bold text-red-500 mb-2">
+                  <div className="text-4xl font-bold text-yellow-400 mb-2">
                     500+
                   </div>
-                  <div className="text-red-300">Success Stories</div>
+                  <div className="text-gray-300">Success Stories</div>
                 </div>
                 <div className="text-center">
-                  {/* <div className="text-4xl font-bold text-indigo-400 mb-2"> */}
-                  <div className="text-4xl font-bold text-red-500 mb-2">8+</div>
-                  <div className="text-red-300">Years Experience</div>
+                  <div className="text-4xl font-bold text-yellow-400 mb-2">
+                    8+
+                  </div>
+                  <div className="text-gray-300">Years Experience</div>
                 </div>
               </div>
             </div>
@@ -458,7 +455,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
+                <button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-8 py-4 rounded-full font-semibold hover:from-yellow-600 hover:to-amber-700 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
                   Contract now
                 </button>
               </div>
@@ -475,14 +472,14 @@ export default function Home() {
         {/* Popular Courses Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-red-50">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Popular
-              <span className="bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
                 {" "}
                 Courses
               </span>
             </h2>
-            <p className="text-xl text-red-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Comprehensive programs designed to take you from beginner to
               expert
             </p>
@@ -540,19 +537,19 @@ export default function Home() {
                 }`}
               >
                 {course.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Most Popular
                   </div>
                 )}
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold mb-2 text-red-400">
+                  <h3 className="text-2xl font-bold mb-2 text-yellow-400">
                     {course.title}
                   </h3>
                   <div className="flex justify-between items-center mb-4">
-                    <span className="bg-red-900 text-red-300 px-3 py-1 rounded-full text-sm">
+                    <span className="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-sm border border-yellow-500/30">
                       {course.level}
                     </span>
-                    <span className="text-red-400">{course.duration}</span>
+                    <span className="text-gray-300">{course.duration}</span>
                   </div>
                 </div>
 
@@ -570,7 +567,7 @@ export default function Home() {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span className="text-red-200">{feature}</span>
+                      <span className="text-gray-200">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -578,8 +575,8 @@ export default function Home() {
                 <button
                   className={`w-full py-3 rounded-full font-semibold transition-all ${
                     course.popular
-                      ? "bg-gradient-to-r from-red-600 to-red-700 text-white hover:from-red-700 hover:to-red-800"
-                      : "border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-white"
+                      ? "bg-gradient-to-r from-yellow-500 to-amber-600 text-white hover:from-yellow-600 hover:to-amber-700"
+                      : "border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white"
                   }`}
                 >
                   Learn More
@@ -589,13 +586,13 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-lg text-red-200 mb-6">
+            <p className="text-lg text-gray-200 mb-6">
               🎯 100% Job Placement Assistance | 🔄 Lifetime Access to Updates |
               📚 Comprehensive Curriculum
             </p>
             <a
               href="/courses"
-              className="inline-block bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105"
+              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-yellow-600 hover:to-amber-700 transition-all transform hover:scale-105"
             >
               View All Courses →
             </a>

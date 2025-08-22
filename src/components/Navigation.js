@@ -37,39 +37,40 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-xl border-b border-red-900/50 shadow-sm">
+    <nav className="fixed top-0 w-full z-50 bg-red-950/90 backdrop-blur-xl border-b border-white/10 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3 sm:py-4">
-          {/* <div className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"> */}
-          <div className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-            Samrat Mukherjee
+        <div className="flex justify-between items-center py-4">
+          <div className="text-2xl font-bold">
+            <span className="text-white">Samrat</span>
+            <span className="text-orange-400 ml-1">Mukherjee</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-4 lg:space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-sm lg:text-base text-red-200 hover:text-red-400 transition-colors py-2 cursor-pointer"
+                className="text-white/80 hover:text-orange-400 transition-colors duration-300 font-medium cursor-pointer relative group"
               >
                 {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
             <a
               href="#start"
               onClick={(e) => handleNavClick(e, "#start")}
-              className="bg-gradient-to-r from-red-500 to-red-700 text-white px-4 lg:px-6 py-2 rounded-full hover:from-red-600 hover:to-red-800 transition-all text-sm lg:text-base cursor-pointer"
+              className="px-6 py-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
-              Start Now
+              Get Started
             </a>
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 text-red-200 hover:text-red-400 transition-colors"
+            className="md:hidden p-2 text-white hover:text-orange-400 transition-colors"
             aria-label="Toggle mobile menu"
           >
             <svg
@@ -105,14 +106,14 @@ export default function Navigation() {
             isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="pb-4 pt-2 border-t border-red-800/50">
+          <div className="pb-4 pt-2 border-t border-white/10">
             <div className="flex flex-col space-y-3">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-red-200 hover:text-red-400 transition-colors py-2 px-2 rounded-md hover:bg-red-900/50 cursor-pointer"
+                  className="text-white/80 hover:text-orange-400 transition-colors py-3 px-4 rounded-lg hover:bg-white/5 cursor-pointer"
                 >
                   {link.label}
                 </a>
@@ -120,9 +121,9 @@ export default function Navigation() {
               <a
                 href="#start"
                 onClick={(e) => handleNavClick(e, "#start")}
-                className="bg-gradient-to-r from-red-500 to-red-700 text-white px-4 py-2 rounded-full hover:from-red-600 hover:to-red-800 transition-all text-center mt-2 cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-6 py-3 rounded-full font-semibold text-center mt-4 cursor-pointer"
               >
-                Start Now
+                Get Started
               </a>
             </div>
           </div>
