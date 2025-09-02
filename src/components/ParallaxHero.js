@@ -41,17 +41,18 @@ export default function ParallaxHero() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative order-1 lg:order-2"
+              className="relative order-1 lg:order-2 flex items-end justify-end lg:justify-center"
             >
-              <div className="relative">
+              <div className="relative lg:ml-8">
                 <Image
                   src="/images/cutout.png"
                   alt="Samrat Mukherjee"
-                  width={500}
-                  height={600}
+                  width={700}
+                  height={840}
                   priority
-                  className="w-full max-w-md mx-auto drop-shadow-2xl"
+                  className="w-[700px] mr-8 drop-shadow-2xl"
                 />
+
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full blur-xl opacity-20" />
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-r from-rose-400 to-pink-400 rounded-full blur-xl opacity-20" />
@@ -84,7 +85,7 @@ export default function ParallaxHero() {
 
               <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-lg">
                 Master Data Analytics, Machine Learning & AI through hands-on
-                projects. Join 2000+ professionals who transformed their careers
+                projects. Join 4000+ professionals who transformed their careers
                 with my proven methodology.
               </p>
 
@@ -107,11 +108,11 @@ export default function ParallaxHero() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-3 gap-1">
                 {[
-                  { value: "2000+", label: "Students Trained" },
-                  { value: "95%", label: "Success Rate" },
-                  { value: "15+", label: "Partner Institutes" },
+                  { value: "4000+", label: "Students Trained" },
+                  { value: "100+", label: "corporate consultations" },
+                  { value: "30+", label: "Partner Institutes" },
                 ].map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -123,7 +124,7 @@ export default function ParallaxHero() {
                     <div className="text-3xl font-bold text-orange-400 mb-1">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-white/60 uppercase tracking-wider">
+                    <div className="text-[12px] text-white/60 uppercase tracking-wider">
                       {stat.label}
                     </div>
                   </motion.div>

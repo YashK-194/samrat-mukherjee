@@ -30,10 +30,11 @@ export default function Navigation() {
 
   const navLinks = [
     { href: "#about", label: "About" },
-    { href: "#corporate-training", label: "Corporate Training" },
     { href: "#college-training", label: "College Training" },
+    { href: "#corporate-training", label: "Corporate Training" },
+    { href: "#corporate-consultation", label: "Corporate Consultation" },
     { href: "#courses", label: "Courses" },
-    { href: "#testimonials", label: "Success Stories" },
+    // { href: "#testimonials", label: "Success Stories" },
   ];
 
   return (
@@ -52,7 +53,7 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-white/80 hover:text-orange-400 transition-colors duration-300 font-medium cursor-pointer relative group"
+                className="text-white/80 hover:text-orange-400 transition-colors duration-300 font-small cursor-pointer relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>

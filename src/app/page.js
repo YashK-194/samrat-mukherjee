@@ -8,14 +8,28 @@ import CollegeFeedbackCarousel from "../components/CollegeFeedbackCarousel";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-900 via-red-900 to-red-950 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-950 to-red-900 text-white">
       {/* Navigation */}
       <Navigation />
 
       {/* Hero Section replaced */}
       <ParallaxHero />
 
-      <AnimatedSection id="about" className="py-20 bg-red-950" delay={0.1}>
+      {/* Brand Strip Section */}
+      <section className="py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
+              Samrat AI and BI
+            </span>
+          </h2>
+          <p className="text-xl md:text-2xl text-white/90 font-medium">
+            Transforming Complexity into Clarity
+          </p>
+        </div>
+      </section>
+
+      <AnimatedSection id="about" className="py-20" delay={0.1}>
         {/* About Me Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -27,38 +41,43 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-lg text-gray-200 mb-6 leading-relaxed">
-                As a Lead Data Analyst and passionate educator, I've dedicated
-                my career to making data analytics accessible and transformative
-                for professionals worldwide.
+                I am a Manager in Data Analytics and a passionate educator with
+                12 years of corporate experience at top organizations like
+                Abbott, Cipla, and Technicolor Creative Studios, alongside 8
+                years of teaching experience.
               </p>
               <p className="text-lg text-gray-200 mb-8 leading-relaxed">
-                With years of hands-on industry experience and a proven teaching
-                methodology, I've helped thousands transition into successful
-                data careers and advance to leadership positions.
+                I specialize in turning complex data into actionable insights,
+                conducting root cause analysis, and managing risks to help
+                leaders make confident, data-driven decisions. I empower
+                professionals to excel in data-driven careers while delivering
+                insights that drive measurable business impact.
               </p>
 
               <div className="grid grid-cols-2 gap-8 mb-8">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-yellow-400 mb-2">
-                    2000+
+                    4000+
                   </div>
                   <div className="text-gray-300">Students Taught</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-yellow-400 mb-2">
-                    15+
+                    30+
                   </div>
                   <div className="text-gray-300">Institutes Partnered</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-yellow-400 mb-2">
-                    500+
+                    100+
                   </div>
-                  <div className="text-gray-300">Success Stories</div>
+                  <div className="text-gray-300">
+                    Corporate projects/consulations
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-yellow-400 mb-2">
-                    8+
+                    10+
                   </div>
                   <div className="text-gray-300">Years Experience</div>
                 </div>
@@ -93,6 +112,192 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
+      {/* College Training Section */}
+      <AnimatedSection
+        id="college-training"
+        className="py-20 relative overflow-hidden"
+        delay={0.1}
+      >
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/ex-img2.png"
+            alt="College Training Background"
+            fill
+            className="object-cover opacity-20"
+            priority={false}
+          />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              College
+              {/* <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"> */}
+              <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                {" "}
+                Training
+              </span>
+            </h2>
+            <p className="text-xl text-red-200 max-w-3xl mx-auto leading-relaxed">
+              Preparing the next generation of data scientists and analysts for
+              tomorrow's challenges
+            </p>
+          </div>
+
+          {/* Main bordered container */}
+          <div className="border-2 border-red-700/50 rounded-3xl p-8 bg-red-950/60 backdrop-blur-lg shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+              {/* Left side - Enhanced subsections */}
+              <div className="space-y-8">
+                {/* Trusted Colleges subsection */}
+                <div className="bg-red-900/40 rounded-2xl p-6 backdrop-blur-sm border border-red-800/30">
+                  <div className="flex items-center mb-6">
+                    <div className="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center mr-3">
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-red-400">
+                      Premier Academic Partners
+                    </h3>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-3 mb-4">
+                    {[
+                      {
+                        name: "Amity - visiting faculty",
+                        rank: "#1 in Engineering",
+                      },
+                      { name: "IGDTUW", rank: "#2 in Technology" },
+                      {
+                        name: "Jaipuria institute",
+                        rank: "Top Private University",
+                      },
+                      {
+                        name: "IMS Engineering College",
+                        rank: "Premier Technical Institute",
+                      },
+                      { name: "Christ university", rank: "Innovation Leader" },
+                      { name: "ITS mohan nagar", rank: "Research Excellence" },
+                    ].map((college, index) => (
+                      <div
+                        key={index}
+                        className="bg-red-900/40 rounded-lg p-3 hover:bg-red-900/60 transition-all duration-300"
+                      >
+                        <div className="flex justify-between items-center">
+                          <span className="text-red-50 font-semibold text-sm">
+                            {college.name}
+                          </span>
+                          <span className="text-red-300 text-xs">
+                            {college.rank}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-red-200">30+ Institutions</span>
+                    <span className="text-red-400 font-medium">
+                      National Coverage
+                    </span>
+                  </div>
+                </div>
+
+                {/* College Feedback subsection */}
+                <div className="bg-red-900/40 rounded-2xl p-6 backdrop-blur-sm border border-red-800/30">
+                  <div className="flex items-center mb-6">
+                    <div className="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center mr-3">
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-red-400">
+                      Academic Excellence
+                    </h3>
+                  </div>
+                  <CollegeFeedbackCarousel />
+                </div>
+              </div>
+
+              {/* Right side - College Training Card */}
+              <div className="bg-gradient-to-br from-red-800/80 to-red-900/80 border border-red-700/50 rounded-2xl p-8 hover:shadow-2xl hover:border-red-400/70 transition-all duration-500 backdrop-blur-sm">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-700 to-red-800 rounded-xl flex items-center justify-center mr-4">
+                    <svg
+                      className="w-6 h-6 text-red-100"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-red-50">
+                      Academic Excellence
+                    </h3>
+                    <p className="text-red-400 font-medium">
+                      Industry-Ready Curriculum
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-red-200 mb-8 leading-relaxed text-lg">
+                  Elevate your institution's curriculum with cutting-edge data
+                  science and analytics programs. Our comprehensive training
+                  modules are designed to prepare students for the modern
+                  data-driven industry landscape.
+                </p>
+
+                {/* Key Features */}
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="bg-red-800/30 rounded-lg p-3">
+                    <div className="text-2xl font-bold text-red-400">2000+</div>
+                    <div className="text-sm text-red-300">Students Trained</div>
+                  </div>
+                  <div className="bg-red-800/30 rounded-lg p-3">
+                    <div className="text-2xl font-bold text-red-400">98%</div>
+                    <div className="text-sm text-red-300">Placement Rate</div>
+                  </div>
+                  <div className="bg-red-800/30 rounded-lg p-3">
+                    <div className="text-2xl font-bold text-red-400">50+</div>
+                    <div className="text-sm text-red-300">
+                      Projects Completed
+                    </div>
+                  </div>
+                  <div className="bg-red-800/30 rounded-lg p-3">
+                    <div className="text-2xl font-bold text-red-400">Live</div>
+                    <div className="text-sm text-red-300">
+                      Industry Projects
+                    </div>
+                  </div>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-8 py-4 rounded-full font-semibold hover:from-yellow-600 hover:to-amber-700 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
+                  Schedule a demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+
       {/* Corporate Training Section */}
       <AnimatedSection
         id="corporate-training"
@@ -108,8 +313,6 @@ export default function Home() {
             className="object-cover opacity-20"
             priority={false}
           />
-          {/* <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-indigo-900/85"></div> */}
-          <div className="absolute inset-0 bg-gradient-to-br from-red-950/95 via-red-900/90 to-red-800/85"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,7 +406,7 @@ export default function Home() {
 
                 {/* <button className="w-full bg-gradient-to-r from-indigo-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg"> */}
                 <button className="w-full bg-gradient-to-r from-red-500 to-red-700 text-white px-8 py-4 rounded-full font-semibold hover:from-red-600 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
-                  Schedule Corporate Consultation
+                  Schedule an appointment
                 </button>
               </div>
 
@@ -231,11 +434,13 @@ export default function Home() {
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     {[
                       "TCS",
-                      "Infosys",
-                      "Wipro",
-                      "Accenture",
+                      "Saint Gobain",
+                      "Technicolor games",
+                      "Abbott",
                       "HCL Tech",
-                      "Cognizant",
+                      "Cipla",
+                      "Macleods",
+                      "Gabriel India Ltd",
                     ].map((company, index) => (
                       <div
                         key={index}
@@ -282,181 +487,158 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      {/* College Training Section */}
+      {/* Corporate Consultation Section */}
       <AnimatedSection
-        id="college-training"
+        id="corporate-consultation"
         className="py-20 relative overflow-hidden"
         delay={0.1}
       >
-        {/* Background Image with Overlay */}
+        {/* Background with subtle pattern */}
         <div className="absolute inset-0">
-          <Image
-            src="/images/ex-img2.png"
-            alt="College Training Background"
-            fill
-            className="object-cover opacity-20"
-            priority={false}
+          {/* Subtle pattern overlay */}
+          <div
+            className="absolute inset-0 opacity-5"
+            style={{
+              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+              backgroundSize: "20px 20px",
+            }}
           />
-          {/* <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-indigo-900/90 to-slate-800/85"></div> */}
-          <div className="absolute inset-0 bg-gradient-to-br from-red-950/95 via-red-900/90 to-red-800/85"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-              College
-              {/* <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"> */}
-              <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Corporate
+              <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-amber-400 bg-clip-text text-transparent">
                 {" "}
-                Training
+                Consultation
               </span>
             </h2>
-            <p className="text-xl text-red-200 max-w-3xl mx-auto leading-relaxed">
-              Preparing the next generation of data scientists and analysts for
-              tomorrow's challenges
+            <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-8">
+              Unlock the power of your company's data with project-based
+              consulting from Samrat AI & BI. Whether you need in-depth analysis
+              for a single project or strategic insights for ongoing
+              initiatives, I deliver tailored solutions that drive measurable
+              results.
             </p>
           </div>
 
-          {/* Main bordered container */}
-          <div className="border-2 border-red-700/50 rounded-3xl p-8 bg-red-950/60 backdrop-blur-lg shadow-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-              {/* Left side - Enhanced subsections */}
-              <div className="space-y-8">
-                {/* Trusted Colleges subsection */}
-                <div className="bg-red-900/40 rounded-2xl p-6 backdrop-blur-sm border border-red-800/30">
-                  <div className="flex items-center mb-6">
-                    <div className="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center mr-3">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold text-red-400">
-                      Premier Academic Partners
-                    </h3>
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-3 mb-4">
-                    {[
-                      { name: "IIT Delhi", rank: "#1 in Engineering" },
-                      { name: "IIT Bombay", rank: "#2 in Technology" },
-                      { name: "BITS Pilani", rank: "Top Private University" },
-                      {
-                        name: "NIT Warangal",
-                        rank: "Premier Technical Institute",
-                      },
-                      { name: "VIT Vellore", rank: "Innovation Leader" },
-                      { name: "IIIT Hyderabad", rank: "Research Excellence" },
-                    ].map((college, index) => (
-                      <div
-                        key={index}
-                        className="bg-red-900/40 rounded-lg p-3 hover:bg-red-900/60 transition-all duration-300"
-                      >
-                        <div className="flex justify-between items-center">
-                          <span className="text-red-50 font-semibold text-sm">
-                            {college.name}
-                          </span>
-                          <span className="text-red-300 text-xs">
-                            {college.rank}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-red-200">20+ Institutions</span>
-                    <span className="text-red-400 font-medium">
-                      National Coverage
-                    </span>
-                  </div>
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column - What I Offer */}
+            <div className="bg-gradient-to-br from-red-800/60 to-red-900/60 border border-red-700/40 rounded-3xl p-8 backdrop-blur-lg shadow-2xl">
+              <div className="flex items-center mb-8">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mr-4">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    />
+                  </svg>
                 </div>
-
-                {/* College Feedback subsection */}
-                <div className="bg-red-900/40 rounded-2xl p-6 backdrop-blur-sm border border-red-800/30">
-                  <div className="flex items-center mb-6">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center mr-3">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold text-red-400">
-                      Academic Excellence
-                    </h3>
-                  </div>
-                  <CollegeFeedbackCarousel />
-                </div>
+                <h3 className="text-2xl font-bold text-white">What I Offer</h3>
               </div>
 
-              {/* Right side - College Training Card */}
-              <div className="bg-gradient-to-br from-red-800/80 to-red-900/80 border border-red-700/50 rounded-2xl p-8 hover:shadow-2xl hover:border-red-400/70 transition-all duration-500 backdrop-blur-sm">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-700 to-red-800 rounded-xl flex items-center justify-center mr-4">
-                    <svg
-                      className="w-6 h-6 text-red-100"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-red-50">
-                      Academic Excellence
-                    </h3>
-                    <p className="text-red-400 font-medium">
-                      Industry-Ready Curriculum
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-red-200 mb-8 leading-relaxed text-lg">
-                  Elevate your institution's curriculum with cutting-edge data
-                  science and analytics programs. Our comprehensive training
-                  modules are designed to prepare students for the modern
-                  data-driven industry landscape.
-                </p>
-
-                {/* Key Features */}
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  <div className="bg-red-800/30 rounded-lg p-3">
-                    <div className="text-2xl font-bold text-red-400">2000+</div>
-                    <div className="text-sm text-red-300">Students Trained</div>
-                  </div>
-                  <div className="bg-red-800/30 rounded-lg p-3">
-                    <div className="text-2xl font-bold text-red-400">98%</div>
-                    <div className="text-sm text-red-300">Placement Rate</div>
-                  </div>
-                  <div className="bg-red-800/30 rounded-lg p-3">
-                    <div className="text-2xl font-bold text-red-400">50+</div>
-                    <div className="text-sm text-red-300">
-                      Projects Completed
+              <div className="space-y-4">
+                {[
+                  "Project-based data analysis and reporting",
+                  "Machine Learning & AI model development for business use cases",
+                  "Business Intelligence dashboards for clear decision-making",
+                  "End-to-end guidance, from raw data to actionable insights",
+                ].map((service, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      <svg
+                        className="w-3 h-3 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                     </div>
+                    <p className="text-white/90 leading-relaxed">{service}</p>
                   </div>
-                  <div className="bg-red-800/30 rounded-lg p-3">
-                    <div className="text-2xl font-bold text-red-400">Live</div>
-                    <div className="text-sm text-red-300">
-                      Industry Projects
-                    </div>
-                  </div>
-                </div>
+                ))}
+              </div>
+            </div>
 
-                <button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-8 py-4 rounded-full font-semibold hover:from-yellow-600 hover:to-amber-700 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
-                  Contract now
+            {/* Right Column - Why Choose Me */}
+            <div className="bg-gradient-to-br from-red-800/60 to-red-900/60 border border-red-700/40 rounded-3xl p-8 backdrop-blur-lg shadow-2xl">
+              <div className="flex items-center mb-8">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white">
+                  Why Companies Choose Me
+                </h3>
+              </div>
+
+              <div className="space-y-4">
+                {[
+                  "Flexible engagement, just like freelance — only when you need it",
+                  "Multiple professionals trained and guided across industries",
+                  "Proven track record with 95% success rate",
+                  "Practical, result-oriented approach",
+                ].map((benefit, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      <svg
+                        className="w-3 h-3 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-white/90 leading-relaxed">{benefit}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Call-to-Action */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 border border-orange-400/30 rounded-2xl p-8 backdrop-blur-sm">
+              <p className="text-lg text-white/90 mb-6 max-w-4xl mx-auto">
+                Whether it's analyzing customer behavior, forecasting trends, or
+                streamlining operations, I help organizations turn data into
+                decisions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-8 py-4 rounded-full font-semibold hover:from-orange-600 hover:to-amber-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Start Your Consultation
+                </button>
+                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                  View Case Studies
                 </button>
               </div>
             </div>
@@ -464,11 +646,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection
-        id="courses"
-        className="py-20 bg-red-950 section-divider"
-        delay={0.1}
-      >
+      <AnimatedSection id="courses" className="py-20" delay={0.1}>
         {/* Popular Courses Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -639,7 +817,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="py-20 bg-black section-divider" delay={0.1}>
+      <AnimatedSection className="py-20" delay={0.1}>
         {/* Samrat Equals Success Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -757,7 +935,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="py-20 bg-black" delay={0.1}>
+      <AnimatedSection className="py-20" delay={0.1}>
         {/* Results Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-red-50">
@@ -805,11 +983,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection
-        id="start"
-        className="py-20 bg-gradient-to-br from-red-800 to-red-950 section-angled-top"
-        delay={0.1}
-      >
+      <AnimatedSection id="start" className="py-20" delay={0.1}>
         {/* Start Now Section */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-8 text-red-50">
