@@ -6,7 +6,7 @@ const CollegeFeedbackCarousel = () => {
 
   const testimonials = [
     {
-      college: "IIT Delhi",
+      college: "IMS Engineering College",
       rating: 5,
       text: "Exceptional curriculum delivery. Students showed remarkable improvement in analytical thinking and practical skills.",
     },
