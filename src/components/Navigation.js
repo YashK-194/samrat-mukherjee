@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,18 +15,28 @@ export default function Navigation() {
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
-    const targetId = href.substring(1); // Remove the # from href
+    const targetId = href.startsWith("#") ? href.substring(1) : href;
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar height
+      const offsetTop =
+        targetElement.getBoundingClientRect().top + window.scrollY - 80; // Account for fixed navbar height
       window.scrollTo({
         top: offsetTop,
         behavior: "smooth",
       });
+      closeMenu();
+      return;
     }
 
-    closeMenu(); // Close mobile menu if open
+    // If target not found on this page (e.g. you're on /courses), navigate to home with hash
+    closeMenu();
+    // Using window.location ensures the browser navigates to the home page and applies the hash.
+    // The browser will jump to the section; if you prefer smooth scrolling after navigation
+    // we can add a small client-side handler on the home page to smooth-scroll on load.
+    window.location.href = `/${
+      href.startsWith("/") ? href.substring(1) : href
+    }`;
   };
 
   const navLinks = [
@@ -41,10 +52,10 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full z-50 bg-red-950/90 backdrop-blur-xl border-b border-white/10 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold">
+          <Link href="/" className="text-2xl font-bold flex items-center">
             <span className="text-white">Samrat</span>
             <span className="text-orange-400 ml-1">Mukherjee</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

@@ -35,7 +35,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-                About
+                About{" "}
                 <span className="bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
                   Samrat
                 </span>
@@ -1032,10 +1032,10 @@ export default function Home() {
                 Samrat Mukherjee
               </h3>
               <p className="text-red-400 mb-4">
-                Lead Data Analyst & Educator helping professionals transform
+                Manager Data Analyst & Educator helping professionals transform
                 their careers through data analytics and machine learning.
               </p>
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 <a
                   href="#"
                   className="text-red-400 hover:text-red-300 transition-colors"
@@ -1054,7 +1054,7 @@ export default function Home() {
                 >
                   Twitter
                 </a>
-              </div>
+              </div> */}
             </div>
 
             <div>

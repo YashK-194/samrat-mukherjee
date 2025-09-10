@@ -11,19 +11,29 @@ const CollegeFeedbackCarousel = () => {
       text: "Exceptional curriculum delivery. Students showed remarkable improvement in analytical thinking and practical skills.",
     },
     {
-      college: "BITS Pilani",
+      college: "Amity University",
       rating: 5,
       text: "The training program perfectly bridged the gap between academic theory and industry requirements.",
     },
     {
-      college: "NIT Warangal",
+      college: "IGDTUW",
       rating: 5,
       text: "Outstanding hands-on approach. Our students are now confident in tackling real-world data challenges.",
     },
     {
-      college: "IIIT Hyderabad",
+      college: "Christ university",
       rating: 5,
       text: "Comprehensive program that enhanced our data science curriculum significantly. Highly recommended.",
+    },
+    {
+      college: "Jaipuria institute",
+      rating: 5,
+      text: "The sessions were highly engaging and tailored to industry needs. Students gained both confidence and practical expertise.",
+    },
+    {
+      college: "Delhi University",
+      rating: 5,
+      text: "A transformative learning experience. The program equipped our students with the skills to excel in data-driven roles.",
     },
   ];
 

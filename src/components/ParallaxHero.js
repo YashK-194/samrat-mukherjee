@@ -1,6 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ParallaxHero() {
   const { scrollY } = useScroll();
@@ -41,16 +42,16 @@ export default function ParallaxHero() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative order-1 lg:order-2 flex items-end justify-end lg:justify-center"
+              className="relative order-1 lg:order-2 flex items-end justify-end self-end lg:justify-end"
             >
-              <div className="relative lg:ml-8">
+              <div className="relative lg:ml-8 lg:mr-8">
                 <Image
                   src="/images/cutout.png"
                   alt="Samrat Mukherjee"
-                  width={700}
-                  height={840}
+                  width={1200}
+                  height={1440}
                   priority
-                  className="w-[700px] mr-8 drop-shadow-2xl"
+                  className="w-full max-w-none h-auto drop-shadow-2xl scale-125 lg:scale-150"
                 />
 
                 {/* Decorative elements */}
@@ -91,20 +92,25 @@ export default function ParallaxHero() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  Start Learning Today
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
-                >
-                  View Success Stories
-                </motion.button>
+                <Link href="#start" className="inline-block">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 h-15 inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    Start Learning Today
+                  </motion.button>
+                </Link>
+
+                <Link href="#testimonials" className="inline-block">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 h-15 inline-flex items-center justify-center border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+                  >
+                    View Success Stories
+                  </motion.button>
+                </Link>
               </div>
 
               {/* Stats */}

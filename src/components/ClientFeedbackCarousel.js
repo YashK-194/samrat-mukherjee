@@ -11,19 +11,29 @@ const ClientFeedbackCarousel = () => {
       text: "Samrat's training methodology is exceptional. Our team's productivity increased by 40% after the program.",
     },
     {
-      company: "Infosys",
+      company: "Saint Gobain",
       rating: 5,
       text: "Highly customized content that perfectly aligned with our business requirements.",
     },
     {
-      company: "Wipro",
+      company: "Technicolor games",
       rating: 5,
       text: "Outstanding trainer with deep industry knowledge. The practical approach was exactly what we needed.",
     },
     {
-      company: "Accenture",
+      company: "Abbott",
       rating: 5,
       text: "The training program significantly enhanced our team's analytical capabilities and confidence.",
+    },
+    {
+      company: "Gabriel India Ltd",
+      rating: 5,
+      text: "The sessions were interactive and impactful. Our employees are now applying data insights more effectively in projects.",
+    },
+    {
+      company: "HCL Technologies",
+      rating: 5,
+      text: "Samrat’s expertise brought immense value. The training empowered our teams to solve complex business problems with data-driven strategies.",
     },
   ];
 
