@@ -4,97 +4,161 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
+    name: "Shivika Gupta",
     role: "Data Analyst at TCS",
     prevRole: "From HR Executive",
     image: "👩‍💼",
     testimonial:
-      "Samrat's course completely transformed my career. In just 4 months, I went from HR to landing my dream job as a Data Analyst with 150% salary increase!",
+      "I had the pleasure of attending training under Samrat sir and he is an outstanding teacher. Clear explanation with examples, engaging teaching style.I highly recommend for anyone looking to gain solid understanding of concepts.",
   },
   {
-    name: "Raj Patel",
+    name: "Bhavya Bhatnagar",
     role: "ML Engineer at Flipkart",
     prevRole: "From Mechanical Engineer",
     image: "👨‍💻",
     testimonial:
-      "The hands-on projects and industry insights were game-changers. Now I'm building ML models at Flipkart, earning 3x my previous salary!",
+      "It was a great honour to join the session. Samrat Sir is truly a master of data science and analytics. His teaching style is very clear, practical, and industry-focused. Each concept is explained with real-world examples which makes learning easier and more interesting.",
   },
   {
-    name: "Sneha Gupta",
+    name: "Anchal Tripathi",
     role: "Senior Data Scientist",
     prevRole: "From Finance Background",
     image: "👩‍🔬",
     testimonial:
-      "Samrat's mentorship and practical approach helped me transition smoothly. Within 6 months, I became a Senior Data Scientist!",
+      "Samrat Sir is a best mentor with a rare ability to make complex topics simple and practical. His real-world approach to teaching data science makes learning engaging and impactful. Highly recommended for anyone serious about mastering analytics",
   },
   {
-    name: "Arjun Singh",
+    name: "Aditiya Bhandari",
     role: "Business Intelligence Analyst",
     prevRole: "From Marketing Background",
     image: "👨‍💼",
     testimonial:
-      "The real-world projects and mentorship helped me transition from marketing to BI. Now I'm creating dashboards that drive million-dollar decisions!",
+      "I had a good experience in learning Power Bi Basics from Samrat. He was good with his content and was able to make us understand. He made us practice the basics multiple time with clarifying all doubts. Has good command over the subject. Really liked his sessions.",
   },
   {
-    name: "Kavya Reddy",
+    name: "Divya Bhardwaj",
     role: "AI Research Engineer",
     prevRole: "From Software Testing",
     image: "👩‍💻",
     testimonial:
-      "From manual testing to AI research! Samrat's course opened doors I never thought possible. The hands-on ML projects were incredible!",
+      "Well-structured sessions, hands-on approach, and good industry relevant examples. Made analytics interesting and practical.",
   },
   {
-    name: "Rohit Kumar",
+    name: "Harsh Aggarwal",
     role: "Data Engineering Manager",
     prevRole: "From Civil Engineering",
     image: "👨‍🔧",
     testimonial:
-      "Complete career pivot from civil to data engineering. The structured approach and industry insights helped me become a manager in just 2 years!",
+      "Had an wonderful experience in training under samrat sir , which makes the concepts clear and the way he explain is very good which makes me understand complex topics.",
+  },
+  {
+    name: "Yash Kumar",
+    role: "Data Analyst at Alchemy",
+    prevRole: "From Blockchain development",
+    image: "👨‍🔧",
+    testimonial:
+      "Had an wonderful experience in training under samrat sir , which makes the concepts clear and the way he explain is very good which makes me understand complex topics.",
+  },
+  {
+    name: "Kashvi Thakur",
+    role: "AI model tester",
+    prevRole: "From Electrical Engineering",
+    image: "👨‍🔧",
+    testimonial:
+      "His teaching style is not only clear and structured, but also industry-focused, which helped me build strong foundational and practical skills. Every concept was explained with real-world examples, and he always ensured that I understood the logic behind the tools—not just the syntax.",
+  },
+  {
+    name: "Taisha Yadav",
+    role: "Data Analyst at Amazon",
+    prevRole: "From Video editing",
+    image: "👨‍🔧",
+    testimonial:
+      "I recently finished a 40-hour course on Computer Vision and Deep Learning and it was a great experience. The course was structured thoughtfully and delivered with clarity. It covered foundational and advanced concepts like perceptron, ANN, CNN and RNN in detail.",
+  },
+  {
+    name: "Vipin Tiwari",
+    role: "Data Analyst",
+    prevRole: "From Graphic Design",
+    image: "👨‍🔧",
+    testimonial:
+      "Samrat has some exceptional understanding of Power BI and has very good knowledge of how it can be delivered relating to the tools which generally people are using.",
+  },
+  {
+    name: "Vrinda Maheshwari",
+    role: "Ml Engineer",
+    prevRole: "From Web development",
+    image: "👨‍🔧",
+    testimonial:
+      "Learning Python and data analytics from Samrat sir was a great experience. His teaching style is clear, engaging, and full of real-life examples that make complex concepts easy to understand. He also keeps the class lively by rewarding students for active participation",
+  },
+  {
+    name: "Aditiya Shrivastav",
+    role: "Insignts Reporter",
+    prevRole: "From software development",
+    image: "👨‍🔧",
+    testimonial:
+      "I had the opportunity to learn Data Analytics under Mr. Samrat Mukherjee, and I must say — it was a truly enriching experience. His deep knowledge of tools like Power BI, Python (pandas, numpy, matplotlib), and data-driven decision-making is unmatched.",
+  },
+  {
+    name: "Bhaumik Yadav",
+    role: "Data Scientist at Agrusoft",
+    prevRole: "Student",
+    image: "👨‍🔧",
+    testimonial:
+      "Had a nice experience with samrat sir back in 2024, he gave me an excellent foundation on data analytics and built an interest for the domain. His services are suggested by me if you want to step into the world of data.",
+  },
+  {
+    name: "Mahima Singh",
+    role: "Student at IMS Ghaziabad",
+    prevRole: "Consultant",
+    image: "👨‍🔧",
+    testimonial:
+      "I had the opportunity to attend a few sessions with Samrat Sir, and his teaching style is truly commendable. He explains concepts with remarkable clarity, using a step-by-step approach and with real-world applications.",
+  },
+  {
+    name: "Pavitra Yadav",
+    role: "AI researcher",
+    prevRole: "Fresher",
+    image: "👨‍🔧",
+    testimonial:
+      "The session was very insightful and Samrat sir explain the concepts in easy way. He teaches with industry specific use cases. I would recommend to attend the PowerBI, Data Analytics training conducted by Samrat Sir.",
   },
 ];
 
 export default function TestimonialsCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+
+  const testimonialsPerSlide = 3;
+  const totalSlides = Math.ceil(testimonials.length / testimonialsPerSlide);
 
   // Auto-advance carousel
   useEffect(() => {
     if (!isAutoPlay) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlay]);
+  }, [isAutoPlay, totalSlides]);
 
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
+  const goToSlide = (slideIndex) => {
+    setCurrentSlide(slideIndex);
   };
 
   const goToPrevious = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
-    );
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
   };
 
-  // Get testimonials to display (3 at a time on larger screens, 1 on mobile)
-  const getVisibleTestimonials = () => {
-    const isLargeScreen =
-      typeof window !== "undefined" && window.innerWidth >= 1024;
-    const testimonialsToShow = isLargeScreen ? 3 : 1;
-    const visible = [];
-
-    for (let i = 0; i < testimonialsToShow; i++) {
-      const index = (currentIndex + i) % testimonials.length;
-      visible.push({ ...testimonials[index], slideIndex: i });
-    }
-
-    return visible;
+  // Get testimonials for current slide
+  const getCurrentSlideTestimonials = () => {
+    const startIndex = currentSlide * testimonialsPerSlide;
+    return testimonials.slice(startIndex, startIndex + testimonialsPerSlide);
   };
 
   return (
@@ -107,43 +171,43 @@ export default function TestimonialsCarousel() {
       <div className="relative overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentIndex}
+            key={currentSlide}
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-6"
           >
-            {getVisibleTestimonials().map((testimonial, index) => (
+            {getCurrentSlideTestimonials().map((testimonial, index) => (
               <motion.div
-                key={`${currentIndex}-${index}`}
+                key={`${currentSlide}-${index}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-card p-8 rounded-2xl transition-all duration-300 shadow-xl"
+                className="glass-card p-6 rounded-2xl transition-all duration-300 shadow-xl max-w-sm mx-auto w-full"
               >
-                <div className="flex items-center mb-6">
-                  <div className="text-4xl mr-4">{testimonial.image}</div>
+                <div className="flex items-center mb-4">
+                  <div className="text-3xl mr-3">{testimonial.image}</div>
                   <div>
-                    <h3 className="font-bold text-white text-lg drop-shadow-sm">
+                    <h3 className="font-bold text-white text-base drop-shadow-sm">
                       {testimonial.name}
                     </h3>
-                    <p className="text-indigo-300 font-semibold drop-shadow-sm">
+                    <p className="text-orange-300 font-semibold text-sm drop-shadow-sm">
                       {testimonial.role}
                     </p>
-                    <p className="text-white/70 text-sm drop-shadow-sm">
+                    <p className="text-white/70 text-xs drop-shadow-sm">
                       {testimonial.prevRole}
                     </p>
                   </div>
                 </div>
-                <p className="text-white/90 leading-relaxed italic drop-shadow-sm">
+                <p className="text-white/90 leading-relaxed italic text-sm drop-shadow-sm line-clamp-4">
                   "{testimonial.testimonial}"
                 </p>
-                <div className="flex text-yellow-300 mt-4 drop-shadow-sm">
+                <div className="flex text-yellow-300 mt-3 drop-shadow-sm">
                   {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
-                      className="w-5 h-5"
+                      className="w-4 h-4"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -161,10 +225,10 @@ export default function TestimonialsCarousel() {
       <button
         onClick={goToPrevious}
         className="absolute left-4 top-1/2 -translate-y-1/2 glass-card p-3 rounded-full hover:bg-white/20 transition-all duration-300 group"
-        aria-label="Previous testimonial"
+        aria-label="Previous slide"
       >
         <svg
-          className="w-6 h-6 text-white group-hover:text-indigo-300 transition-colors"
+          className="w-6 h-6 text-white group-hover:text-orange-300 transition-colors"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -181,10 +245,10 @@ export default function TestimonialsCarousel() {
       <button
         onClick={goToNext}
         className="absolute right-4 top-1/2 -translate-y-1/2 glass-card p-3 rounded-full hover:bg-white/20 transition-all duration-300 group"
-        aria-label="Next testimonial"
+        aria-label="Next slide"
       >
         <svg
-          className="w-6 h-6 text-white group-hover:text-indigo-300 transition-colors"
+          className="w-6 h-6 text-white group-hover:text-orange-300 transition-colors"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -198,18 +262,18 @@ export default function TestimonialsCarousel() {
         </svg>
       </button>
 
-      {/* Dots Indicator */}
+      {/* Dots Indicator - Now shows slides instead of individual testimonials */}
       <div className="flex justify-center mt-8 space-x-2">
-        {testimonials.map((_, index) => (
+        {Array.from({ length: totalSlides }).map((_, slideIndex) => (
           <button
-            key={index}
-            onClick={() => goToSlide(index)}
+            key={slideIndex}
+            onClick={() => goToSlide(slideIndex)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex
-                ? "bg-indigo-400 w-8"
+              slideIndex === currentSlide
+                ? "bg-orange-400 w-8"
                 : "bg-white/30 hover:bg-white/50"
             }`}
-            aria-label={`Go to testimonial ${index + 1}`}
+            aria-label={`Go to slide ${slideIndex + 1}`}
           />
         ))}
       </div>
@@ -217,10 +281,10 @@ export default function TestimonialsCarousel() {
       {/* Progress Bar */}
       <div className="mt-4 w-full bg-white/20 rounded-full h-1">
         <motion.div
-          className="bg-gradient-to-r from-indigo-400 to-blue-500 h-full rounded-full"
+          className="bg-gradient-to-r from-orange-400 to-amber-500 h-full rounded-full"
           initial={{ width: "0%" }}
           animate={{
-            width: `${((currentIndex + 1) / testimonials.length) * 100}%`,
+            width: `${((currentSlide + 1) / totalSlides) * 100}%`,
           }}
           transition={{ duration: 0.3 }}
         />

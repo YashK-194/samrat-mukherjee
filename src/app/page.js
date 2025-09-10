@@ -5,6 +5,8 @@ import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import Navigation from "../components/Navigation";
 import ClientFeedbackCarousel from "../components/ClientFeedbackCarousel";
 import CollegeFeedbackCarousel from "../components/CollegeFeedbackCarousel";
+import CorporateLogosStrip from "../components/CorporateLogosStrip";
+import CollegeLogosStrip from "../components/CollegeLogosStrip";
 
 export default function Home() {
   return (
@@ -112,6 +114,11 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
+      {/* Corporate Logos Strip */}
+      <CorporateLogosStrip />
+      {/* College Logos Strip */}
+      <CollegeLogosStrip />
+
       {/* College Training Section */}
       <AnimatedSection
         id="college-training"
@@ -135,7 +142,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               College
               {/* <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"> */}
-              <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
                 {" "}
                 Training
               </span>
@@ -321,7 +328,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Corporate
               {/* <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"> */}
-              <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
                 {" "}
                 Training
               </span>
@@ -802,8 +809,8 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
-              Success
-              <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent">
+              Success{" "}
+              <span className="bg-gradient-to-r from-yellow-500 to-amber-600 mt-3 drop-shadow-sm bg-clip-text text-transparent">
                 Stories
               </span>
             </h2>
@@ -939,8 +946,8 @@ export default function Home() {
         {/* Results Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-red-50">
-            Results You'll See After Taking
-            <span className="bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent">
+            Results You'll See After Taking{" "}
+            <span className="bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
               My Courses
             </span>
           </h2>
