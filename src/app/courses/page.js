@@ -2,15 +2,28 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Navigation from "../../components/Navigation";
+import { useState } from "react";
 
 export default function CoursesPage() {
+  const [activeTab, setActiveTab] = useState("All");
+
+  const tabs = [
+    "All",
+    "Artificial Intelligence",
+    "Data Science",
+    "Machine Learning",
+    "Big Data & Cloud",
+    "Business Intelligence",
+  ];
+
   const courses = [
     {
       title: "Data Science Course",
-      image: "/images/ex-img1.png",
+      image: "/images/courses/data-science.png",
       classes: "60 Classes",
       hours: "650 Hours",
       level: "Experience",
+      category: "Data Science",
       description:
         "Master the complete data science pipeline from data collection to machine learning deployment. This comprehensive course covers statistical analysis, data visualization, and predictive modeling.",
       skills: [
@@ -24,10 +37,11 @@ export default function CoursesPage() {
     },
     {
       title: "Data Analytics Course",
-      image: "/images/ex-img2.png",
+      image: "/images/courses/data-analytics.png",
       classes: "38 Classes",
       hours: "500 Hours",
       level: "Experience",
+      category: "Data Science",
       description:
         "Transform raw data into actionable business insights. Learn to analyze trends, create compelling visualizations, and make data-driven recommendations for business growth.",
       skills: [
@@ -41,10 +55,11 @@ export default function CoursesPage() {
     },
     {
       title: "Business Analytics Course",
-      image: "/images/ex-img3.png",
+      image: "/images/courses/business-analytics.png",
       classes: "38 Classes",
       hours: "475 Hours",
       level: "Experience",
+      category: "Business Intelligence",
       description:
         "Bridge the gap between business strategy and data insights. Learn to identify business problems, analyze performance metrics, and drive strategic decision-making through analytics.",
       skills: [
@@ -61,10 +76,11 @@ export default function CoursesPage() {
   const additionalCourses = [
     {
       title: "Machine Learning Mastery",
-      image: "/images/ex-img4.png",
+      image: "/images/courses/machine-learning.png",
       classes: "45 Classes",
       hours: "580 Hours",
       level: "Advanced",
+      category: "Machine Learning",
       description:
         "Dive deep into machine learning algorithms and artificial intelligence. Build, train, and deploy ML models that solve real-world problems and automate decision-making processes.",
       skills: [
@@ -78,10 +94,11 @@ export default function CoursesPage() {
     },
     {
       title: "Artificial Intelligence",
-      image: "/images/ex-img5.png",
+      image: "/images/courses/artificial-intelligence.png",
       classes: "52 Classes",
       hours: "720 Hours",
       level: "Expert",
+      category: "Artificial Intelligence",
       description:
         "Explore the cutting-edge of AI technology. Master deep learning, natural language processing, and computer vision to build intelligent systems that can see, understand, and interact.",
       skills: [
@@ -95,10 +112,11 @@ export default function CoursesPage() {
     },
     {
       title: "Big Data & Cloud Analytics",
-      image: "/images/bluecamo.png",
+      image: "/images/courses/big-data-cloud.png",
       classes: "40 Classes",
       hours: "550 Hours",
       level: "Advanced",
+      category: "Big Data & Cloud",
       description:
         "Handle massive datasets and leverage cloud computing power. Learn to process, analyze, and extract insights from big data using modern distributed computing frameworks.",
       skills: [
@@ -110,9 +128,123 @@ export default function CoursesPage() {
         "Data Lake Architecture & Management",
       ],
     },
+    {
+      title: "Advanced AI and Generative AI Program",
+      image: "/images/courses/generative-ai.png",
+      classes: "48 Classes",
+      hours: "600 Hours",
+      level: "Expert",
+      category: "Artificial Intelligence",
+      description:
+        "Master cutting-edge AI models like GPT, DALL·E 2, and GANs. Learn to train, fine-tune, and deploy generative AI models with frameworks like Hugging Face and Transformers, bringing your creative AI ideas to life.",
+      skills: [
+        "Generative AI & GANs",
+        "Prompt Engineering",
+        "LLM Fine-Tuning & Deployment",
+        "Transformers & Hugging Face",
+        "AI for Image & Text Generation",
+        "Ethics & Safety in Generative AI",
+      ],
+    },
+    {
+      title: "Applied Data Science with AI",
+      image: "/images/courses/data-science-with-ai.png",
+      classes: "50 Classes",
+      hours: "650 Hours",
+      level: "Advanced",
+      category: "Data Science",
+      description:
+        "Gain hands-on experience with the complete AI & ML pipeline. Learn to build, evaluate, and deploy models using industry-relevant tools and technologies, solving real-world business problems.",
+      skills: [
+        "Exploratory Data Analysis",
+        "Machine Learning Algorithms",
+        "Deep Learning Basics",
+        "Model Evaluation & Deployment",
+        "Data Wrangling & Feature Engineering",
+        "Industry-Grade Project Workflows",
+      ],
+    },
+    {
+      title: "Applied Data Science with Python",
+      image: "/images/courses/data-science-with-python.png",
+      classes: "46 Classes",
+      hours: "600 Hours",
+      level: "Advanced",
+      category: "Data Science",
+      description:
+        "Learn Python for data science from the ground up, covering statistics, ML, and DL. Gain hands-on experience through projects and master practical skills to analyze data and build intelligent solutions.",
+      skills: [
+        "Python Programming for Data Science",
+        "Descriptive & Inferential Statistics",
+        "Supervised & Unsupervised ML",
+        "Deep Learning for AI",
+        "Data Visualization (Matplotlib, Seaborn)",
+        "Pandas & NumPy for Data Manipulation",
+      ],
+    },
+    {
+      title: "Mastering Data Science with R",
+      image: "/images/courses/data-science-with-r.png",
+      classes: "46 Classes",
+      hours: "600 Hours",
+      level: "Advanced",
+      category: "Data Science",
+      description:
+        "Learn R programming and its applications in data science, statistics, and machine learning. Work on hands-on projects to gain practical experience and prepare for real-world AI and analytics roles.",
+      skills: [
+        "R Programming for Data Science",
+        "Statistical Modeling",
+        "Machine Learning with R",
+        "Data Visualization with ggplot2",
+        "Deep Learning Integration with R",
+        "Project-Based Learning",
+      ],
+    },
+    {
+      title: "Mastering Data Visualizations with Power BI",
+      image: "/images/courses/data-visualization-with-bi.png",
+      classes: "35 Classes",
+      hours: "400 Hours",
+      level: "Intermediate",
+      category: "Business Intelligence",
+      description:
+        "Master Power BI to transform raw data into interactive dashboards and actionable insights. Build professional-grade reports and visualizations that drive data-informed decisions.",
+      skills: [
+        "Power BI Fundamentals",
+        "Data Modeling & DAX",
+        "Interactive Dashboards",
+        "Real-Time Data Visualization",
+        "Data Cleaning & Transformation",
+        "Storytelling with Data",
+      ],
+    },
+    {
+      title: "Big Data with Data Science",
+      image: "/images/courses/big-data.png",
+      classes: "55 Classes",
+      hours: "750 Hours",
+      level: "Expert",
+      category: "Big Data & Cloud",
+      description:
+        "Gain expertise in handling large-scale datasets with modern big data tools and frameworks. Learn to integrate data science techniques with big data systems to build scalable AI-powered solutions.",
+      skills: [
+        "Hadoop & Spark Ecosystem",
+        "SQL & NoSQL Databases",
+        "Python for Big Data",
+        "Machine Learning on Large Datasets",
+        "Real-Time Data Processing",
+        "End-to-End Big Data Project Implementation",
+      ],
+    },
   ];
 
   const allCourses = [...courses, ...additionalCourses];
+
+  // Filter courses based on active tab
+  const filteredCourses =
+    activeTab === "All"
+      ? allCourses
+      : allCourses.filter((course) => course.category === activeTab);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-950 via-red-900 to-red text-white">
@@ -160,14 +292,21 @@ export default function CoursesPage() {
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center mb-12">
-            <div className="bg-red-900/40 backdrop-blur-sm border border-red-700/50 rounded-full p-2">
-              <div className="flex space-x-1">
-                <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-full font-semibold transition-all duration-300">
-                  Data Science & Analytics
-                </button>
-                <button className="px-8 py-3 text-white/70 hover:text-white rounded-full font-semibold transition-all duration-300">
-                  Artificial Intelligence
-                </button>
+            <div className="bg-red-900/40 backdrop-blur-sm border border-red-700/50 rounded-full p-2 overflow-x-auto">
+              <div className="flex space-x-1 min-w-fit">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 whitespace-nowrap text-sm lg:text-base ${
+                      activeTab === tab
+                        ? "bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg"
+                        : "text-white/70 hover:text-white hover:bg-white/10"
+                    }`}
+                  >
+                    {tab}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
@@ -178,7 +317,7 @@ export default function CoursesPage() {
       <section className="pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {allCourses.map((course, index) => (
+            {filteredCourses.map((course, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
