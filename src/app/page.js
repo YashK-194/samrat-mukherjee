@@ -9,6 +9,29 @@ import CorporateLogosStrip from "../components/CorporateLogosStrip";
 import CollegeLogosStrip from "../components/CollegeLogosStrip";
 
 export default function Home() {
+  // Replace the URLs in these maps with the real institute/company pages.
+  // Placeholder URLs - replace with real URLs when ready
+  const instituteLinks = {
+    "Indian Institute of Management": "https://share.google/PxsDC4OLpPmqPIpWc",
+    Amity: "https://share.google/WyuuVh0qyN2ZxxawV",
+    IGDTUW: "https://share.google/rpedYIjeNycDUoNBq",
+    "Jaipuria institute": "https://share.google/gfYZVzlTVC69fWs2Z",
+    "IMS Engineering College": "https://share.google/2gXjd29rJwoslF8du",
+    "Christ university": "https://share.google/KdmUYVV9kx05lnvhA",
+    "ITS mohan nagar": "https://share.google/7ZaB3P068EsnaVCQ0",
+  };
+
+  const companyLinks = {
+    TCS: "https://www.tcs.com/",
+    "Saint Gobain": "https://www.saint-gobain.com/en",
+    "Technicolor games": "https://www.technicolor.com/",
+    Abbott: "https://www.abbott.co.in/",
+    "HCL Tech": "https://www.hcltech.com/",
+    Cipla: "https://www.cipla.com/",
+    Macleods: "https://www.macleodspharma.com/about/",
+    "Gabriel India Ltd": "https://www.anandgroupindia.com/gabrielindia",
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-950 to-red-900 text-white">
       {/* Navigation */}
@@ -148,7 +171,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-xl text-red-200 max-w-3xl mx-auto leading-relaxed">
-              Preparing the next generation of data scientists and analysts for
+              Preparing the next generation of Data Scientists and Analysts for
               tomorrow's challenges
             </p>
           </div>
@@ -178,7 +201,11 @@ export default function Home() {
                   <div className="grid grid-cols-1 gap-3 mb-4">
                     {[
                       {
-                        name: "Amity - visiting faculty",
+                        name: "Indian Institute of Management",
+                        rank: "India's best management Institute",
+                      },
+                      {
+                        name: "Amity",
                         rank: "#1 in Engineering",
                       },
                       { name: "IGDTUW", rank: "#2 in Technology" },
@@ -199,7 +226,23 @@ export default function Home() {
                       >
                         <div className="flex justify-between items-center">
                           <span className="text-red-50 font-semibold text-sm">
-                            {college.name}
+                            <a
+                              href={instituteLinks[college.name] || "#"}
+                              target={
+                                instituteLinks[college.name]
+                                  ? "_blank"
+                                  : undefined
+                              }
+                              rel={
+                                instituteLinks[college.name]
+                                  ? "noopener noreferrer"
+                                  : undefined
+                              }
+                              className="hover:text-red-300 transition-colors"
+                              aria-label={`Visit ${college.name}`}
+                            >
+                              {college.name}
+                            </a>
                           </span>
                           <span className="text-red-300 text-xs">
                             {college.rank}
@@ -454,7 +497,21 @@ export default function Home() {
                         className="bg-red-900/40 rounded-lg p-3 text-center hover:bg-red-900/60 transition-all duration-300"
                       >
                         <span className="text-red-50 font-semibold text-sm">
-                          {company}
+                          <a
+                            href={companyLinks[company] || "#"}
+                            target={
+                              companyLinks[company] ? "_blank" : undefined
+                            }
+                            rel={
+                              companyLinks[company]
+                                ? "noopener noreferrer"
+                                : undefined
+                            }
+                            className="hover:text-red-300 transition-colors"
+                            aria-label={`Visit ${company}`}
+                          >
+                            {company}
+                          </a>
                         </span>
                       </div>
                     ))}
@@ -857,8 +914,8 @@ export default function Home() {
                     Industry Connection
                   </h3>
                   <p className="text-red-200">
-                    Direct partnerships with 50+ companies for immediate job
-                    placement opportunities.
+                    Connections to 50+ companies offering hiring opportunities
+                    for candidates.
                   </p>
                 </div>
 
@@ -1109,8 +1166,26 @@ export default function Home() {
                 Contact
               </h4>
               <div className="space-y-2 text-red-400">
-                <p>📧 samrat@dataanalytics.com</p>
-                <p>📱 +91 98765 43210</p>
+                <p>
+                  📧
+                  <a
+                    href="mailto:samrataiandbi@gmail.com"
+                    className="ml-2 hover:text-red-300 transition-colors"
+                    aria-label="Send email to Samrat Mukherjee"
+                  >
+                    samrataiandbi@gmail.com
+                  </a>
+                </p>
+                <p>
+                  📱
+                  <a
+                    href="tel:+919810803676"
+                    className="ml-2 hover:text-red-300 transition-colors"
+                    aria-label="Call Samrat Mukherjee"
+                  >
+                    +91 98108 03676
+                  </a>
+                </p>
                 <p>🌐 Available for corporate training</p>
               </div>
             </div>
