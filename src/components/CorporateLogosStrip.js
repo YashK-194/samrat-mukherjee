@@ -31,7 +31,7 @@ const CorporateLogosStrip = () => {
           Trusted by Leading Corporations and Educational Institutions
         </h2>
         <p className="text-amber-200 text-center text-lg">
-          Corporations and universities I have collaborate with
+          Corporations and Universities I have collaborated with
         </p>
       </div>
 
