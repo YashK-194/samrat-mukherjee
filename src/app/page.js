@@ -842,6 +842,34 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
+      <AnimatedSection id="batches" className="py-20" delay={0.1}>
+        {/* Batches Section */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <span className="bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
+                Batches
+              </span>
+            </h2>
+          </div>
+
+          <div className="bg-red-900 border-2 border-red-800 rounded-2xl p-8 text-center">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-4 leading-relaxed">
+              Batches are formed based on student availability and course preference to ensure the best learning experience.
+            </p>
+            <div className="inline-block bg-white/10 border border-white/20 text-white/90 px-4 py-2 rounded-full mb-6">
+              📅 Flexible timings | 👥 Small groups | 📚 Focused sessions
+            </div>
+            <p className="text-lg text-gray-200 mb-8">
+              Interested? Reach out and I’ll add you to the next suitable batch.
+            </p>
+            <button className="bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-yellow-600 hover:to-amber-700 transition-all transform hover:scale-105 shadow-lg">
+              Join a Batch
+            </button>
+          </div>
+        </div>
+      </AnimatedSection>
+
       <AnimatedSection
         id="testimonials"
         className="py-20 relative overflow-hidden"
